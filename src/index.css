@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&family=Great+Vibes&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 30 20% 97%;
+    --foreground: 20 30% 15%;
+
+    --card: 30 25% 95%;
+    --card-foreground: 20 30% 15%;
+
+    --popover: 30 20% 97%;
+    --popover-foreground: 20 30% 15%;
+
+    --primary: 20 40% 22%;
+    --primary-foreground: 40 50% 92%;
+
+    --secondary: 275 30% 80%;
+    --secondary-foreground: 20 30% 15%;
+
+    --muted: 30 15% 90%;
+    --muted-foreground: 20 10% 45%;
+
+    --accent: 40 60% 50%;
+    --accent-foreground: 20 40% 12%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 30 20% 85%;
+    --input: 30 20% 85%;
+    --ring: 40 60% 50%;
+
+    --radius: 0.5rem;
+
+    /* Custom wedding tokens */
+    --gold: 40 60% 50%;
+    --gold-light: 40 55% 70%;
+    --gold-dark: 40 65% 35%;
+    --brown: 20 40% 22%;
+    --brown-light: 20 30% 35%;
+    --lilac: 275 30% 80%;
+    --lilac-light: 275 40% 90%;
+    --wedding-green: 140 35% 40%;
+    --cream: 40 40% 95%;
+    --hero-overlay: linear-gradient(to bottom, hsla(20, 40%, 12%, 0.6), hsla(20, 40%, 12%, 0.85));
+
+    --font-display: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+    --font-script: 'Great Vibes', cursive;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply px-6 py-20 md:px-12 lg:px-24 lg:py-28;
+  }
+  .gold-divider {
+    @apply w-24 h-0.5 mx-auto;
+    background: linear-gradient(90deg, transparent, hsl(var(--gold)), transparent);
+  }
+  .gold-text {
+    color: hsl(var(--gold));
+  }
+  .gold-gradient-text {
+    background: linear-gradient(135deg, hsl(var(--gold-light)), hsl(var(--gold)), hsl(var(--gold-dark)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .script-font {
+    font-family: var(--font-script);
+  }
+}
+
+@layer utilities {
+  .text-shadow-hero {
+    text-shadow: 0 2px 20px hsla(20, 40%, 12%, 0.5);
+  }
+}
