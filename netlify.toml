@@ -1,0 +1,55 @@
+# Netlify Configuration for Love Bloom Wedding Showcase
+
+[build]
+command = "npm run build"
+publish = "dist"
+functions = "supabase/functions"
+
+# Environment variables
+[build.environment]
+NODE_VERSION = "20"
+
+# Rewrite all non-existent routes to index.html for SPA routing
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200
+
+# Don't rewrite actual files (images, CSS, JS, etc.)
+[[redirects]]
+from = "/assets/*"
+to = "/assets/:splat"
+status = 200
+
+[[redirects]]
+from = "/public/*"
+to = "/public/:splat"
+status = 200
+
+# Security headers
+[[headers]]
+for = "/*"
+[headers.values]
+X-Frame-Options = "SAMEORIGIN"
+X-Content-Type-Options = "nosniff"
+X-XSS-Protection = "1; mode=block"
+Referrer-Policy = "strict-origin-when-cross-origin"
+Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
+# Cache control for immutable assets
+[[headers]]
+for = "/assets/*"
+[headers.values]
+Cache-Control = "public, immutable, max-age=31536000"
+
+# Cache control for HTML (not cached to allow updates)
+[[headers]]
+for = "/*.html"
+[headers.values]
+Cache-Control = "public, max-age=3600"
+
+# Cache control for index.html
+[[headers]]
+for = "/index.html"
+[headers.values]
+Cache-Control = "public, max-age=3600"
