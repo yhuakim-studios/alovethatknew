@@ -1,14 +1,18 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import storyImg from "@/assets/couple-story.jpg";
+import storyImg from "@/assets/story2.jpg";
 
 export default function LoveStory() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="story" className="section-padding bg-cream overflow-hidden" ref={ref}>
+    <section
+      id="story"
+      className="section-padding bg-cream overflow-hidden"
+      ref={ref}
+    >
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -16,8 +20,12 @@ export default function LoveStory() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <p className="font-script text-3xl gold-text mb-2">How it all began</p>
-          <h2 className="font-display text-4xl md:text-5xl text-foreground font-bold">Our Journey</h2>
+          <p className="font-script text-3xl gold-text mb-2">
+            How it all began
+          </p>
+          <h2 className="font-display text-4xl md:text-5xl text-foreground font-bold">
+            Our Journey
+          </h2>
           <div className="gold-divider mt-6" />
         </motion.div>
 
@@ -29,7 +37,11 @@ export default function LoveStory() {
             className="relative"
           >
             <div className="relative overflow-hidden rounded-2xl shadow-2xl">
-              <img src={storyImg} alt="Our love story" className="w-full h-[500px] object-cover" />
+              <img
+                src={storyImg}
+                alt="Our love story"
+                className="w-full h-[500px] object-cover object-top"
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent" />
             </div>
             {/* Decorative frame */}
@@ -44,13 +56,20 @@ export default function LoveStory() {
             className="space-y-6"
           >
             <p className="font-body text-muted-foreground leading-relaxed text-lg">
-              Our love story is one beautifully written by God. What began as a simple connection grew into a deep friendship and a lifelong commitment.
+              Our love story is one beautifully written by God. What began as a
+              simple connection grew into a deep friendship and a lifelong
+              commitment.
             </p>
             <p className="font-body text-muted-foreground leading-relaxed text-lg">
-              Through every moment shared, we discovered a bond that felt perfectly crafted for us. Truly it's a ride worthwhile which we responded to and today, God has brought us to celebrate togetherness forever.
+              Through every moment shared, we discovered a bond that felt
+              perfectly crafted for us. Truly it's a ride worthwhile which we
+              responded to and today, God has brought us to celebrate
+              togetherness forever.
             </p>
             <p className="font-body text-muted-foreground leading-relaxed text-lg">
-              Today, surrounded by family and friends, we celebrate the love that brought us together and the future we will build side by side.
+              Today, surrounded by family and friends, we celebrate the love
+              that brought us together and the future we will build side by
+              side.
             </p>
             <div className="pt-4">
               <p className="font-script text-3xl gold-text">Forever & Always</p>

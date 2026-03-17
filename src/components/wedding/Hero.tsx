@@ -1,13 +1,20 @@
 import { motion } from "framer-motion";
-import heroImg from "@/assets/couple-hero.jpg";
+import heroImg from "@/assets/hero2.jpg";
 import { Heart } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+    >
       {/* Background image */}
       <div className="absolute inset-0">
-        <img src={heroImg} alt="Cynthia & Paul" className="w-full h-full object-cover" />
+        <img
+          src={heroImg}
+          alt="Cynthia & Paul"
+          className="w-full h-full object-cover object-[50%_20%]"
+        />
         <div className="absolute inset-0 bg-primary/50" />
       </div>
 

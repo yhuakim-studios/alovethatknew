@@ -1,8 +1,8 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Church, MapPin, PartyPopper } from "lucide-react";
-import coupleHero from "@/assets/couple-hero.jpg";
-import coupleStory from "@/assets/couple-story.jpg";
+import coupleHero from "@/assets/hero.jpg";
+import coupleStory from "@/assets/story.jpg";
 
 const events = [
   {
@@ -48,7 +48,9 @@ export default function WeddingDetails() {
           className="text-center mb-16"
         >
           <p className="font-script text-3xl gold-text mb-2">Save the Date</p>
-          <h2 className="font-display text-4xl md:text-5xl text-foreground font-bold">Wedding Details</h2>
+          <h2 className="font-display text-4xl md:text-5xl text-foreground font-bold">
+            Wedding Details
+          </h2>
           <div className="gold-divider mt-6" />
         </motion.div>
 
@@ -79,7 +81,9 @@ export default function WeddingDetails() {
                 </div>
 
                 {/* Script Title */}
-                <h3 className="font-script text-4xl md:text-5xl text-white mb-4">{event.title}</h3>
+                <h3 className="font-script text-4xl md:text-5xl text-white mb-4">
+                  {event.title}
+                </h3>
 
                 {/* Date & Time */}
                 <p className="text-white/80 text-sm tracking-[0.2em] uppercase font-body mb-6">
@@ -90,8 +94,12 @@ export default function WeddingDetails() {
                 <div className="w-16 h-px bg-white/30 mb-6" />
 
                 {/* Venue */}
-                <h4 className="font-display text-xl md:text-2xl text-white font-semibold mb-2">{event.venue}</h4>
-                <p className="text-white/60 font-body text-sm mb-8">{event.location}</p>
+                <h4 className="font-display text-xl md:text-2xl text-white font-semibold mb-2">
+                  {event.venue}
+                </h4>
+                <p className="text-white/60 font-body text-sm mb-8">
+                  {event.location}
+                </p>
 
                 {/* View Map Button */}
                 <a
@@ -116,7 +124,9 @@ export default function WeddingDetails() {
           className="mt-20 text-center"
         >
           <p className="font-script text-3xl gold-text mb-2">What to Wear</p>
-          <h3 className="font-display text-3xl md:text-4xl text-foreground font-bold mb-10">Colours of the Day</h3>
+          <h3 className="font-display text-3xl md:text-4xl text-foreground font-bold mb-10">
+            Colours of the Day
+          </h3>
           <div className="gold-divider mb-12" />
 
           <div className="flex justify-center gap-4 md:gap-0 flex-wrap">
@@ -129,11 +139,15 @@ export default function WeddingDetails() {
                 className="relative group flex flex-col items-center"
               >
                 <div className="relative mx-4 md:mx-6">
-                  <div className={`w-20 h-20 md:w-24 md:h-24 rounded-full ${c.color} shadow-lg group-hover:scale-110 transition-transform duration-500`} />
+                  <div
+                    className={`w-20 h-20 md:w-24 md:h-24 rounded-full ${c.color} shadow-lg group-hover:scale-110 transition-transform duration-500`}
+                  />
                   <div className="absolute inset-0 rounded-full border-2 border-gold/20 scale-[1.2] group-hover:scale-[1.35] group-hover:border-gold/40 transition-all duration-500" />
                   <div className="absolute inset-0 rounded-full border border-gold/10 scale-[1.4] group-hover:scale-[1.55] transition-all duration-700" />
                 </div>
-                <span className="mt-5 font-display text-sm text-foreground font-medium tracking-wide">{c.name}</span>
+                <span className="mt-5 font-display text-sm text-foreground font-medium tracking-wide">
+                  {c.name}
+                </span>
               </motion.div>
             ))}
           </div>
@@ -144,7 +158,8 @@ export default function WeddingDetails() {
             transition={{ delay: 1.4 }}
             className="mt-10 text-sm text-muted-foreground font-body max-w-md mx-auto leading-relaxed"
           >
-            We'd love for our guests to complement the celebration by incorporating these colours into their outfits.
+            We'd love for our guests to complement the celebration by
+            incorporating these colours into their outfits.
           </motion.p>
         </motion.div>
       </div>
